@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="./index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="container">
+          <h2>Dropdowns</h2>
+          <p>The .dropdown class is used to indicate a dropdown menu.</p>
+          <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+          <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and
+            data-toggle="dropdown".</p>
+          <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin horizontal
+            border:
+          </p>
+          <p>The .dropdown-header class is used to add headers inside the dropdown menu</p>
+          <p>Highlight a specific dropdown item with the .active class (adds a blue background color).
+
+            To disable an item in the dropdown menu, use the .disabled class (gets a light-grey text color and a
+            "no-parking-sign" icon on hover)</p>
+
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu">
+              <h5 class="dropdown-header">Dropdown header</h5>
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item active" href="#">Link 2</a>
+              <a class="dropdown-item disabled" href="#">Link 3</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <p>Add the .dropdown-menu-right class to .dropdown-menu to right-align the dropdown menu.</p>
+          <p>You can also create a "dropright" or "dropleft" menu, by adding the .dropright or .dropleft class to the
+            dropdown element. Note that the caret/arrow is added automatically:</p>
+          <div class="dropdown dropright">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Wide dropdown button to demonstrate this example
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+        <p>If you want the dropdown menu to expand upwards instead of downwards, change the <div> element with
+            class="dropdown" to "dropup":</p>
+        <div class="container">
+          <h4>Dropdown Split Buttons</h4>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-4">
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

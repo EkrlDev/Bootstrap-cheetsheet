@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="./index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+
+      <div class="col-lg-6">
+        <div class="container">
+          <h2>Basic Progress Bar</h2>
+          <p>To create a default progress bar, add a .progress class to a container element and add the progress-bar
+            class
+            to its child element. Use the CSS width property to set the width of the progress bar:</p>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width:70%"></div>
+          </div>
+          <br>
+          <div class="progress" style="height:20px">
+            <div class="progress-bar bg-danger" style="width:30%; height: 20px;">30%</div>
+          </div>
+          <br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-info" style="width:50%"></div>
+          </div>
+          <br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:90%">Loading
+            </div>
+          </div>
+          <br>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width:50%">
+              Free Space
+            </div>
+            <div class="progress-bar bg-warning" style="width:25%">
+              Warning
+            </div>
+            <div class="progress-bar bg-danger" style="width:15%">
+              Danger
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h2>Pagination</h2>
+          <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each
+            li element and a .page-link class to each link inside li:</p>
+          <p>Add class .active to let the user know which page he/she is on:</p>
+          <p>Add class .disabled if a page for some reason is disabled:</p>
+          <p>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks.</p>
+          <p>Use utilitiy classes to change the alignment of the pagination:</p>
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+          <p>Another form for pagination, is breadcrumbs</p>
+          <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Photos</a></li>
+            <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+            <li class="breadcrumb-item"><a href="#">Italy</a></li>
+            <li class="breadcrumb-item active">Rome</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Basic List Group</h2>
+          <p>To create a basic list group, use an <code>ul</code> element with class list-group, and <code>li</code>
+            elements with class list-group-item</p>
+          <p>Use the .active class to highlight the current item:</p>
+          <p>To create a list group with linked items, add the .list-group-item-action class if you want a grey
+            background color on hover:</p>
+          <p>The .disabled class adds a lighter text color to the disabled item. And when used on links, it will remove
+            the hover effect:</p>
+          <ul class="list-group">
+            <li class="list-group-item active list-group-item-action">First item</li>
+            <li class="list-group-item list-group-item-action disabled">Second item</li>
+            <li class="list-group-item list-group-item-action">Third item</li>
+          </ul>
+          <p>If you want the list items to display horizontally instead of vertically (side by side instead of on top of
+            each other), add the .list-group-horizontal class to .list-group</p>
+          <p>Contextual classes can be used to color list items:</p>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item list-group-item-success">First item</li>
+            <li class="list-group-item list-group-item-info">Second item</li>
+            <li class="list-group-item list-group-item-warning">Third item</li>
+            <li class="list-group-item list-group-item-danger">Fourth item</li>
+          </ul>
+          <h2>List Group With Badges</h2>
+          <p>Combine .badge classes with utility/helper classes to add badges inside the list group:</p>
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Inbox
+              <span class="badge badge-primary badge-pill">12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Ads
+              <span class="badge badge-primary badge-pill">50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Junk
+              <span class="badge badge-primary badge-pill">99</span>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Collapsibles</h2>
+          <p>Collapsibles are useful when you want to hide and show large amount of content</p>
+          <p>The .collapse class indicates a collapsible element (a <code>div</code>in our example); this is the content
+            that will be shown or hidden with a click of a button. To control (show/hide) the collapsible content, add
+            the data-toggle="collapse" attribute to an <code>a</code> or a <code>button</code> element. Then add the
+            data-target="#id" attribute to connect the button with the collapsiblen content .Note: For <code>a</code>
+            elements, you can use the href attribute instead of the data-target
+            attribute:</p>
+          <p>Click on the button to toggle between showing and hiding content.</p>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">Simple
+            collapsible</button>
+          <div id="demo" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="container">
+          <h2>Accordion Example</h2>
+          <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements
+            under the specified parent will be closed when one of the collapsible item is shown.</p>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                  Collapsible Group Item #3 (Not data-parented)
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse">
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h3>Tooltip</h3>
+          <p>The Tooltip component is small pop-up box that appears when the user moves the mouse pointer over an
+            element:</p>
+          <p>To create a tooltip, add the data-toggle="tooltip" attribute to an element.
+
+            Use the title attribute to specify the text that should be displayed inside the tooltip:</p>
+          <p>Note: Tooltips must be initialized with jQuery: select the specified element and call the tooltip()
+            method.
+
+            The following code will enable all tooltips in the document:</p>
+          <p>By default, the tooltip will appear on top of the element.
+
+            Use the data-placement attribute to set the position of the tooltip on top, bottom, left or the right side
+            of the element:</p>
+          <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+          <a href="#" data-toggle="tooltip" data-placement="right" title="Hohohoho!">Hover again</a>
+          <script>
+            $(document).ready(function () {
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+          </script>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2>Bootstrap 4 Cards</h2>
+        <p>A card in Bootstrap 4 is a bordered box with some padding around its content. It includes options for
+          headers, footers, content, colors, etc.</p>
+        <p>A basic card is created with the .card class, and content inside the card has a .card-body class:</p>
+        <p>To add a background color the card, use contextual classes (.bg-primary, .bg-success, .bg-info, .bg-warning,
+          .bg-danger, .bg-secondary, .bg-dark and .bg-light.)</p>
+        <p>Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom
+          margins for a <p> element if it is the last child (or the only one) inside .card-body. The .card-link class
+            adds a blue color to any link, and a hover effect.</p>
+          <div class="card">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some example text. Some example text.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+            <div class="card-footer">Footer</div>
+          </div>
+
+          <h2>Card Image</h2>
+          <p>Add .card-img-top or .card-img-bottom to an <img> to place the image at the top or at the bottom inside the
+            card. Note that we have added the image outside of the .card-body to span the entire width:</p>
+          <p>Add the .stretched-link class to a link inside the card, and it will make the whole card clickable and
+            hoverable (the card will act as a link):
+          </p>
+          <p>Image at the top (card-img-top):</p>
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary stretched-link">See Profile</a>
+            </div>
+          </div>
+          <h2>Card Image Overlay</h2>
+          <p>Turn an image into a card background and use .card-img-overlay to overlay the card's text:</p>
+          <div class="card img-fluid" style="width:400px">
+            <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. Some example text some example text. Some
+                example text some example text. Some example text some example text.</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+          <div class="container">
+            <h2>Cards Columns</h2>
+            <p>The .card-columns class creates a masonry-like grid of cards. The layout will automatically adjust as you
+              insert more cards.</p>
+            <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
+            <div class="card-columns">
+              <div class="card bg-primary">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the first card</p>
+                </div>
+              </div>
+              <div class="card bg-warning">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the second card</p>
+                </div>
+              </div>
+              <div class="card bg-success">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the third card</p>
+                </div>
+              </div>
+              <div class="card bg-danger">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the fourth card</p>
+                </div>
+              </div>
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the fifth card</p>
+                </div>
+              </div>
+              <div class="card bg-info">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the sixth card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <h2>Card Deck</h2>
+            <p>The .card-deck class creates an <strong>equal height and width</strong> grid of cards. The layout will
+              automatically adjust as you insert more cards.</p>
+            <p>In this example we have added extra content to the first card, to make it taller. Notice how the other
+              cards follow.</p>
+            <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
+            <div class="card-deck">
+              <div class="card bg-primary">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the first card</p>
+                </div>
+              </div>
+              <div class="card bg-warning">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the second card</p>
+                </div>
+              </div>
+              <div class="card bg-success">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the third card</p>
+                </div>
+              </div>
+              <div class="card bg-danger">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the fourth card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <h2>Card Group</h2>
+            <p>The .card-group class is similar to .card-deck, which creates an <strong>equal height and width</strong>
+              grid of cards.</p>
+            <p>However, the .card-group class removes left and right margins between each card.</p>
+            <p>In this example we have added extra content to the first card, to make it taller. Notice how the other
+              cards follow.</p>
+            <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px),
+              <strong>WITH</strong> top and bottom margin:</p>
+            <div class="card-group">
+              <div class="card bg-primary">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the first card</p>
+                </div>
+              </div>
+              <div class="card bg-warning">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the second card</p>
+                </div>
+              </div>
+              <div class="card bg-success">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the third card</p>
+                </div>
+              </div>
+              <div class="card bg-danger">
+                <div class="card-body text-center">
+                  <p class="card-text">Some text inside the fourth card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</body>
+
+</html>
