@@ -9,6 +9,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -35,17 +43,260 @@
     <div class="row">
 
       <div class="col-lg-6">
-        <p>deneme</p>
+        <h2>Bootstrap Custom Forms</h2>
+        <p>Bootstrap 4 comes with customized form elements, that are meant to replace browser defaults:</p>
+        <div class="container mt-3">
+          <h3>Custom Checkbox</h3>
+          <p>To create a custom checkbox, wrap a container element, like div, with a class of .custom-control and
+            .custom-checkbox around the checkbox. Then add the .custom-control-input to the checkbox.</p>
+          <p><strong>Tip:</strong> If you use labels for accompanying text, add the .custom-control-label class to it.
+            Note that the value of the for attribute should match the id of the checkbox:</p>
+          <form action="/action_page.php">
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label" for="customCheck">Custom checkbox</label>
+            </div>
+            <input type="checkbox" id="defaultCheck" name="example2">
+            <label for="defaultCheck">Default checkbox</label>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <h3>Custom Switch</h3>
+          <p>To create a custom "toggle switch", wrap a container element, like div, with a class of .custom-control and
+            .custom-switch around a checkbox. Then add the .custom-control-input class to the checkbox:</p>
 
+          <form action="/action_page.php">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+              <label class="custom-control-label" for="switch1">Toggle me</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <h3>Custom Radio Buttons</h3>
+          <p>To create a custom radio button, wrap a container element, like div, with a class of .custom-control and
+            .custom-radio around the radio button. Then add the .custom-control-input to the radio button.</p>
+          <p><strong>Tip:</strong> If you use labels for accompanying text, add the .custom-control-label class to it.
+            Note that the value of the for attribute should match the id of the radio:</p>
+          <form action="/action_page.php">
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="customRadio" name="example1">
+              <label class="custom-control-label" for="customRadio">Custom radio</label>
+            </div>
+            <input type="radio" id="defaultRadio" name="example2">
+            <label for="defaultRadio">Default radio</label>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <p>If you want the custom form controls to sit side by side (inline), add the .custom-control-inline to the
+            wrapper/container:</p>
+          <h3>Custom Select Menu</h3>
+          <p>To create a custom select menu, add the .custom-select class to the select element:</p>
+          <form action="/action_page.php">
+            <select name="cars" class="custom-select mb-3">
+              <option selected>Custom Select Menu</option>
+              <option value="volvo">Volvo</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <p>Use the .custom-select-sm class to create a small select menu and the .custom-select-lg class for a large
+            one:</p>
+          <h3>Custom Range</h3>
+          <p>To create a custom range menu, add the .custom-range class to the input element with type="range":</p>
+          <form action="/action_page.php">
+            <label for="customRange">Custom range</label>
+            <input type="range" class="custom-range" id="customRange" name="points1">
+            <label for="defaultRange">Default range</label>
+            <input type="range" id="defaultRange" name="points2">
+            <p><button type="submit" class="btn btn-primary">Submit</button></p>
+          </form>
+          <h3>Custom File</h3>
+          <p>To create a custom file upload, wrap a container element with a class of .custom-file around the input with
+            type="file". Then add the .custom-file-input to the file input:</p>
+          <form action="/action_page.php">
+            <p>Custom file:</p>
+            <div class="custom-file mb-3">
+              <input type="file" class="custom-file-input" id="customFile" name="filename">
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+
+            <p>Default file:</p>
+            <input type="file" id="myFile" name="filename2">
+
+            <div class="mt-3">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+          <script>
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+              var fileName = $(this).val().split("\\").pop();
+              $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+          </script>
+          <h2>Bootstrap Corousel</h2>
+          <p>The Carousel is a slideshow for cycling through elements.</p>
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="beach.jpg" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3>Silen Beach</h3>
+                  <p>We had such a great time!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="sydney.jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                  <h3>Sydney</h3>
+                  <p>City of unspoken stories!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="wellington.jpg" alt="New York" width="1100" height="500">
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+        <div class="container">
+          <h2>Modals</h2>
+          <p>The Modal component is a dialog box/popup window that is displayed on top of the current page It is like
+            alert</p>
+          <p>Change the size of the modal by adding the .modal-sm class for small modals, .modal-lg class for large
+            modals, or .modal-xl for extra large modals</p>
+          <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.
+          </p>
+          <p>Center the modal vertically and horizontally within the page, with the .modal-dialog-centered class:</p>
+          <p>When you have alot of content inside the modal, a scrollbar is added to the page. See the examples below to
+            understand it</p>
+          <p>However, it is possible to only scroll inside the modal, instead of the page itself, by adding
+            .modal-dialog-scrollable to .modal-dialog</p>
+
+          <!-- Button to Open the Modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Open modal
+          </button>
+
+          <!-- The Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Modal Heading</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  Modal body..There are lots of things to write here.
+                  <p>such a text</p>
+                  <p>such a text</p>
+                  <p>such a text</p>
+                  <p>such a text</p>
+                  <p>such a text</p>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div class="col-sm-6">
-        <p>deneme</p>
+        <h2>Popovers</h2>
+        <p>The Popover component is similar to tooltips; it is a pop-up box that appears when the user clicks on an
+          element. The difference is that the popover can contain much more content.</p>
+        <p>To create a popover, add the data-toggle="popover" attribute to an element.
+
+          Use the title attribute to specify the header text of the popover, and use the data-content attribute to
+          specify the text that should be displayed inside the popover's body</p>
+        <p>To create a popover, add the data-toggle="popover" attribute to an element.
+
+          Use the title attribute to specify the header text of the popover, and use the data-content attribute to
+          specify the text that should be displayed inside the popover's body:</p>
+        <p>Note: Popovers must be initialized with jQuery: select the specified element and call the popover() method.
+        </p>
+        <p>By default, the popover will appear on the right side of the element.
+
+          Use the data-placement attribute to set the position of the popover on top, bottom, left or the right side
+          of the element</p>
+        <p>By default, the popover is closed when you click on the element again. However, you can use the
+          data-trigger="focus" attribute which will close the popover when clicking outside the element</p>
+        <p>Tip: If you want the popover to be displayed when you move the mouse pointer over the element, use the
+          data-trigger attribute with a value of "hover"</p>
+        <div class="container">
+          <h3>Popover Example</h3>
+          <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover"
+            data-placement="bottom" data-trigger="focus">Toggle
+            popover</a>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+          });
+        </script>
+        <div class="container">
+          <h2>Toast</h2>
+
+          <p>A toast is like an alert box that is only shown for a couple of seconds when something happens (i.e. when a
+            user clicks on a button, submits a form, etc.).</p>
+          <p>To create a toast, use the .toast class, and add a .toast-header and a .toast-body inside of it</p>
+          <p>Note: Toasts must be initialized with jQuery: select the specified element and call the toast() method
+          </p>
+          <p>In this example, we use a button to show the toast message.</p>
+
+          <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+
+          <div class="toast">
+            <div class="toast-header">
+              Toast Header
+            </div>
+            <div class="toast-body">
+              Some text inside the toast body
+            </div>
+          </div>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            $("#myBtn").click(function () {
+              $('.toast').toast('show');
+            });
+          });
+        </script>
+
+
+
       </div>
-
-
     </div>
   </div>
+
 </body>
 
 </html>
